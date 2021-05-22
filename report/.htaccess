@@ -1,0 +1,11 @@
+# Turn rewrite engine on
+Options +FollowSymlinks
+RewriteEngine on
+
+#Create Report
+RewriteRule ^report/create/$   reportService/ReportServiceRouter.php?page_key=create [nc,qsa]
+RewriteRule ^report/create$   reportService/ReportServiceRouter.php?page_key=create [nc,qsa]
+
+#View Report By Date and Request Type
+RewriteRule ^report/viewDateType/$   reportService/ReportServiceRouter.php?page_key=viewByDate [nc,qsa]
+RewriteRule ^report/viewDateType$   reportService/ReportServiceRouter.php?page_key=viewByDate [nc,qsa]

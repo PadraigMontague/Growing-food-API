@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://code.jquery.com/jquery-3.4.0.js"
+        integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+    <title>Developer Mode</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand">GrowToEat</a>
+            <a class="nav-link" href="./search.html">Normal Mode</a>
+        </nav>
+    </header>
+    <div class="container mainDiv">
+        <div class="row">
+            <p class="welcomeTitle">Developer Mode</p>
+        </div>
+        <div class="row">
+            <form class="searchBar">
+                <p class="searchByMonthTitle">Search By Plant Name</p>
+                <select class="form-control form-control-lg" id="vegName">
+                    <option default>What do you want to grow?</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Fruit">Fruit</option>
+                </select>
+                <br>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg" placeholder="Please enter a type of plant"
+                        id="plantType">
+                </div>
+                <select class="form-control form-control-lg" id="dataType">
+                    <option default>What type of response data would you like?</option>
+                    <option value="JSON">JSON</option>
+                    <option value="XML">XML</option>
+                </select>
+
+                <button class="searchBtnDev" type="submit" class="btn btn-primary" id="searchDevMode">Search</button>
+            </form>
+            <form class="searchByMonth">
+                <p class="searchByMonthTitle">Search By Month</p>
+                <select class="form-control form-control-lg" id="vegNameMonth">
+                    <option default>What do you want to grow?</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Fruit">Fruit</option>
+                </select>
+                <br>
+                <select class="form-control form-control-lg" id="monthName">
+                    <option default>Please select a month</option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+                <select class="form-control form-control-lg" id="dataType">
+                    <option default>What type of response data would you like?</option>
+                    <option value="JSON">JSON</option>
+                    <option value="XML">XML</option>
+                </select>
+                <button class="searchBtn" type="submit" class="btn btn-primary"
+                    id="searchByMonthDevMode">Search</button>
+            </form>
+            <form class="createVeg">
+                <p class="searchByMonthTitle">Create a new vegetable</p>
+                <p class="response"></p>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg"
+                        placeholder="Please enter the name of the vegetable" id="vegname" required />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg"
+                        placeholder="Please enter the family / type of vegetable" id="type" required />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg" placeholder="Please enter the sowing month"
+                        id="sowMonth" required />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg" placeholder="Please enter the harvest month"
+                        id="harvestMonth" required />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg"
+                        placeholder="Please enter the minimum growing temperature" id="minTemp" required />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg" placeholder="Please enter the soil type"
+                        id="soilType" required />
+                </div>
+                <button class="searchBtn" type="submit" class="btn btn-primary" id="createV">Submit</button>
+            </form>
+            <form class="createFruit">
+                <p class="searchByMonthTitle">Create a new fruit</p>
+                <p class="responseTwo"></p>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg"
+                        placeholder="Please enter the name of the fruit" id="fruitname" required />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg" placeholder="Please enter the type of fruit"
+                        id="fruitType" required />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg"
+                        placeholder="Please enter the planting month" id="plantingMonth" required />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg" placeholder="Please enter the harvest month"
+                        id="harvestMonthFruit" required />
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg" placeholder="Please enter the soil type"
+                        id="soilTypeFruit" required />
+                </div>
+                <button class="searchBtn" type="submit" class="btn btn-primary" id="createF">Submit</button>
+            </form>
+            <button type="button" class="displayAll" onclick="displayAll()">Fetch All Vegetables</button>
+            <button type="button" class="displayAllFruit" onclick="displayAllFruit()">Fetch All Fruit</button>
+            <form class="updateVeg">
+                <p class="searchTitle">Update Vegetable</p>
+                <p class="responseUpdate"></p>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg"
+                        placeholder="Please enter the name of the vegetable" id="vegnameToUpdate" required />
+                </div>
+                <button type="button" class="displayAllUpdate" onclick="displayAllUpdate()">Submit</button>
+            </form>
+            <form class="updateFruit">
+                <p class="searchTitle">Update Fruit</p>
+                <p class="responseUpdateTwo"></p>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg"
+                        placeholder="Please enter the name of the fruit" id="fruitnameToUpdate" required />
+                </div>
+                <button type="button" class="displayAllUpdate" onclick="displayAllFruitUpdate()">Submit</button>
+            </form>
+            <div class="diffSearch">
+                <button class="switchOne" onclick="displaySearchByNameDev()"></button>
+                <button class="switchTwo" onclick="displaySearchByMonthDev()"></button>
+                <button class="switchThree" onclick="createVegDev()"></button>
+                <button class="switchFour" onclick="createFruitDev()"></button>
+                <button class="switchFive" onclick="displayAllDev()"></button>
+                <button class="switchSix" onclick="displayToUpdateDev()"></button>
+            </div>
+        </div>
+        <div class="row">
+            <div id="data"></div>
+        </div>
+    </div>
+    <script>
+        if (localStorage.username === undefined) {
+            document.querySelector('.mainDiv').style.display = 'none';
+            document.querySelector('.navbar ').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,290 @@
+body {
+    height: 90vh;
+    background-color: #607D8B;
+}
+
+.login,
+.register {
+    text-align: center;
+    background-color: #0000008f;
+    padding: 5%;
+}
+
+.indexTitles {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.token_title {
+    margin-top: 2rem;
+    float: left;
+    color: #fff;
+}
+
+.jwt {
+    color: #fff;
+    padding: 2rem;
+}
+
+.token {
+    margin-top: 4rem;
+    width: 100%;
+    height: 20vh;
+    border: solid;
+    border-color: black;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: scroll;
+}
+
+/*HOME PAGE*/
+.welcomeTitle {
+    font-size: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+}
+
+.searchBar {
+    width: 100%;
+}
+
+#data {
+    width: 100%;
+    background-color: white;
+    height: auto;
+}
+
+.tab {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+    background-color: #fff;
+    color: black;
+    border: solid;
+    border-color: #607d8b;
+    border-width: 0.5rem;
+}
+
+.searchBtn {
+    width: 100%;
+    background-color: cadetblue;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    border: none;
+}
+
+/*SEARCH BY MONTH*/
+.searchByMonth {
+    display: none;
+    width: 100%;
+}
+
+.searchByMonthTitle {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.diffSearch {
+    width: 100%;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.switchOne,
+.switchTwo,
+.switchThree,
+.switchFour,
+.switchFive,
+.switchSix {
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    margin-left: 0.5rem;
+    background-color: #fff;
+}
+
+.switchOne {
+    background-color: cadetblue;
+}
+
+#monthName {
+    margin-bottom: 1.5rem;
+}
+
+.noDATA {
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+a {
+    color: #fff;
+}
+
+.logoutLink {
+    color: #fff !important;
+    cursor: pointer;
+}
+
+.calculator {
+    display: none;
+    width: 100%;
+}
+
+.numberOfPlants {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.searchByWeather {
+    display: none;
+    width: 100%;
+}
+
+/*DEVELOPER MODE*/
+.searchBtnDev {
+    width: 100%;
+    background-color: cadetblue;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    border: none;
+    margin-top: 2rem;
+}
+
+.createVeg,
+.createFruit {
+    display: none;
+    width: 100%;
+}
+
+.response,
+.responseTwo {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#dataType,
+#searchByMonthDevMode {
+    margin-top: 1.5rem;
+}
+
+.navbar-brand {
+    color: #fff !important;
+}
+
+.displayAll {
+    width: 40%;
+    float: left;
+    display: none;
+    background-color: cadetblue;
+    border: none;
+    height: 3rem;
+    border-radius: 3px;
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 1rem;
+}
+
+.displayAllFruit {
+    width: 40%;
+    float: right;
+    display: none;
+    background-color: cadetblue;
+    border: none;
+    height: 3rem;
+    border-radius: 3px;
+    margin-left: 5%;
+    margin-top: 1rem;
+}
+
+.displayAllUpdate {
+    width: 40%;
+    width: 100%;
+    float: left;
+    display: block;
+    background-color: cadetblue;
+    border: none;
+    height: 3rem;
+    border-radius: 3px;
+    margin-top: 1rem;
+}
+
+.displayAllFruitUpdate {
+    width: 40%;
+    float: right;
+    display: none;
+    background-color: cadetblue;
+    border: none;
+    height: 3rem;
+    border-radius: 3px;
+    margin-left: 5%;
+    margin-top: 1rem;
+}
+
+.deleteBtn {
+    width: 100%;
+    border: none;
+    background-color: #ea4848;
+    height: 3rem;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.fetchAllTab {
+    width: 33%;
+    height: auto;
+    padding: 2rem;
+    background-color: #fff;
+    color: black;
+    border: solid;
+    border-color: #607d8b;
+    border-width: 0.5rem;
+    display: inline-block;
+}
+
+.fetchAllWrapper {
+    background-color: #607d8b;
+    padding-top: 1rem;
+}
+
+.updateVeg {
+    width: 40%;
+    display: none;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.updateFruit {
+    width: 40%;
+    display: none;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+input {
+    width: 100%;
+}
+
+.updateBtn {
+    width: 100%;
+    border: none;
+    background-color: #009688;
+    height: 3rem;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+.searchTitle {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.responseUpdate,
+.responseUpdateTwo {
+    text-align: center;
+}

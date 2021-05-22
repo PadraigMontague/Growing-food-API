@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://code.jquery.com/jquery-3.4.0.js"
+        integrity="sha256-DYZMCC8HTC+QDr5QNaIcfR7VSPtcISykd+6eSmBW5qo=" crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+    <title>Home Page</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand">GrowToEat</a>
+            <a class="nav-link" href="./developer.html">Developer Mode</a>
+            <a class="nav-link logoutLink" onclick="logout()">Logout</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="row">
+        </div>
+        <div class="row mainDiv mt-3">
+            <form class="searchBar">
+                <p class="searchByMonthTitle">Search By Plant Name</p>
+                <select class="form-control form-control-lg" id="vegName">
+                    <option selected="selected">What do you want to grow?</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Fruit">Fruit</option>
+                </select>
+                <br>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg"
+                        placeholder="Please enter the name of the plant you want to grow" id="inputName" required />
+                </div>
+
+                <button class="searchBtn" type="submit" class="btn btn-primary" id="search">Search</button>
+            </form>
+            <form class="searchByMonth">
+                <p class="searchByMonthTitle">Search By Planting Month</p>
+                <select class="form-control form-control-lg" id="vegNameMonth">
+                    <option default>What do you want to grow?</option>
+                    <option value="Vegetables">Vegetables</option>
+                    <option value="Fruit">Fruit</option>
+                </select>
+                <br>
+                <select class="form-control form-control-lg" id="monthName">
+                    <option default>Please select a month</option>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                </select>
+                <button class="searchBtn" type="submit" class="btn btn-primary" id="searchByMonth">Search</button>
+            </form>
+            <form class="calculator">
+                <p class="searchByMonthTitle">Calculate the amount of plants you could grow!</p>
+                <div class="form-group">
+                    <input type="number" class="form-control form-control-lg"
+                        placeholder="Size of area (In square feet)" id="squareFeet" required />
+                </div>
+                <div class="form-group">
+                    <input type="number" class="form-control form-control-lg"
+                        placeholder="Please enter distance between plants (In inches)" id="spacing" required />
+                </div>
+                <button class="searchBtn" type="submit" class="btn btn-primary" id="calculate">Calculate</button>
+            </form>
+            <form class="searchByWeather">
+                <p class="searchByMonthTitle">Search to see if there is good planting conditions in your area</p>
+                <div class="form-group">
+                    <input type="text" class="form-control form-control-lg"
+                        placeholder="Name of you area" id="placename" required />
+                </div>
+                <button class="searchBtn" type="submit" class="btn btn-primary" id="getWeather">Submit</button>
+            </form>
+            <div class="diffSearch">
+                <button class="switchOne" onclick="displaySearchByName()"></button>
+                <button class="switchTwo" onclick="displaySearchByMonth()"></button>
+                <button class="switchThree" onclick="displayCalculator()"></button>
+                <button class="switchFour" onclick="displayWeather()"></button>
+            </div>
+        </div>
+        <div class="row">
+            <div id="data"></div>
+        </div>
+    </div>
+    <script>
+        if (localStorage.username === undefined) {
+            document.querySelector('.mainDiv').style.display = 'none';
+            document.querySelector('.navbar ').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

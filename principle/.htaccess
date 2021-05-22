@@ -1,0 +1,54 @@
+# Turn rewrite engine on
+Options +FollowSymlinks
+RewriteEngine on
+
+# Vegetables Endpoints
+RewriteRule ^vegetables/create/$   vegetables/VegetablesServiceRouter.php?page_key=create [nc,qsa]
+RewriteRule ^vegetables/create$   vegetables/VegetablesServiceRouter.php?page_key=create [nc,qsa]
+
+RewriteRule ^vegetables/fetchAll/$   vegetables/VegetablesServiceRouter.php?page_key=fetchAll [nc,qsa]
+RewriteRule ^vegetables/fetchAll$   vegetables/VegetablesServiceRouter.php?page_key=fetchAll [nc,qsa]
+
+RewriteRule ^vegetables/fetchByName/$   vegetables/VegetablesServiceRouter.php?page_key=fetchByName [nc,qsa]
+RewriteRule ^vegetables/fetchByName$   vegetables/VegetablesServiceRouter.php?page_key=fetchByName [nc,qsa]
+
+RewriteRule ^vegetables/update/$   vegetables/VegetablesServiceRouter.php?page_key=update [nc,qsa]
+RewriteRule ^vegetables/update$   vegetables/VegetablesServiceRouter.php?page_key=update [nc,qsa]
+
+RewriteRule ^vegetables/delete/$   vegetables/VegetablesServiceRouter.php?page_key=delete [nc,qsa]
+RewriteRule ^vegetables/delete$   vegetables/VegetablesServiceRouter.php?page_key=delete [nc,qsa]
+
+RewriteRule ^vegetables/searchByTemp/$   vegetables/VegetablesServiceRouter.php?page_key=searchByTemp [nc,qsa]
+RewriteRule ^vegetables/searchByTemp$   vegetables/VegetablesServiceRouter.php?page_key=searchByTemp [nc,qsa]
+
+RewriteRule ^vegetables/searchSowMonth/$   vegetables/VegetablesServiceRouter.php?page_key=sowMonth [nc,qsa]
+RewriteRule ^vegetables/searchSowMonth$   vegetables/VegetablesServiceRouter.php?page_key=sowMonth [nc,qsa]
+
+RewriteRule ^vegetables/calculate/$   vegetables/VegetablesServiceRouter.php?page_key=calculate [nc,qsa]
+RewriteRule ^vegetables/calculate$   vegetables/VegetablesServiceRouter.php?page_key=calculate [nc,qsa]
+
+RewriteRule ^vegetables/weather/$   vegetables/VegetablesServiceRouter.php?page_key=weather [nc,qsa]
+RewriteRule ^vegetables/weather$   vegetables/VegetablesServiceRouter.php?page_key=weather [nc,qsa]
+
+# Fruit Endpoints
+
+RewriteRule ^fruit/create/$   fruit/FruitServiceRouter.php?page_key=create [nc,qsa]
+RewriteRule ^fruit/create$   fruit/FruitServiceRouter.php?page_key=create [nc,qsa]
+
+RewriteRule ^fruit/fetchAll/$   fruit/FruitServiceRouter.php?page_key=fetchAll [nc,qsa]
+RewriteRule ^fruit/fetchAll$   fruit/FruitServiceRouter.php?page_key=fetchAll [nc,qsa]
+
+RewriteRule ^fruit/fetchByName/$   fruit/FruitServiceRouter.php?page_key=fetchByName [nc,qsa]
+RewriteRule ^fruit/fetchByName$   fruit/FruitServiceRouter.php?page_key=fetchByName [nc,qsa]
+
+RewriteRule ^fruit/update/$   fruit/FruitServiceRouter.php?page_key=update [nc,qsa]
+RewriteRule ^fruit/update$   fruit/FruitServiceRouter.php?page_key=update [nc,qsa]
+
+RewriteRule ^fruit/delete/$   fruit/FruitServiceRouter.php?page_key=delete [nc,qsa]
+RewriteRule ^fruit/delete$   fruit/FruitServiceRouter.php?page_key=delete [nc,qsa]
+
+RewriteRule ^fruit/calculate/$   fruit/FruitServiceRouter.php?page_key=calculate [nc,qsa]
+RewriteRule ^fruit/calculate$   fruit/FruitServiceRouter.php?page_key=calculate [nc,qsa]
+
+RewriteRule ^fruit/plantingMonth/$   fruit/FruitServiceRouter.php?page_key=plantingMonth [nc,qsa]
+RewriteRule ^fruit/plantingMonth$   fruit/FruitServiceRouter.php?page_key=plantingMonth [nc,qsa]
